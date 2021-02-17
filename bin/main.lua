@@ -114,7 +114,15 @@ function reg:getValue(root, path, key)
 	type, message = result:match("(.+)=(.+)")
 	
 	if type == "OUT" then
-		return message == "nil" and nil or message
+		if message == "nil" then 
+			return nil
+		elseif tonumber(message) ~= nil then
+			return tonumber(message)
+		elseif message:lower() == "true" or message:lower() == "false" then
+			return message:lower() == "true"
+		else
+			return message
+		end
 	elseif type == "ERR" then
 		error(message)
 	else
