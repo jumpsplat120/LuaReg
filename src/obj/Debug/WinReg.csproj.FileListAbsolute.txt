@@ -1,0 +1,6 @@
+E:\Documents\C++\WinReg\bin\Debug\WinReg.dll
+E:\Documents\C++\WinReg\bin\Debug\WinReg.pdb
+E:\Documents\C++\WinReg\obj\Debug\WinReg.csprojAssemblyReference.cache
+E:\Documents\C++\WinReg\obj\Debug\WinReg.csproj.CoreCompileInputs.cache
+E:\Documents\C++\WinReg\obj\Debug\WinReg.dll
+E:\Documents\C++\WinReg\obj\Debug\WinReg.pdb
