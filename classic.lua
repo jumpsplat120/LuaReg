@@ -3,8 +3,8 @@
 
 Copyright (c) 2014, rxi, modified by Jumpsplat120
 
-This module is free software; you can redistribute it and/or modify it under the terms of the MIT license. See LICENSE for details.
-
+This module is free software; you can redistribute it and/or modify it 
+under the terms of the MIT license. See THIRD_PARTY for details.
 --]]
 
 local Object = {}
