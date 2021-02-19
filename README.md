@@ -12,6 +12,8 @@ Some terminology might not be what you expect. That's due to the term key origin
 
 Most methods have a root and a path. A root is the top level entries, in their abbreviated form. For example, `HKEY_LOCAL_MACHINE` would be `HKLM`. Path is the rest of the path to an entry. Path's use blackslashes, and don't include the root. So for example, if you wanted the entry `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft`, root would be `HKLM` and path would be `SOFTWARE\Microsoft`. Don't forget to escape your backslashes.
 
+When working with luareg, keep WinReg.dll next to main.lua. If you are using love2d and you are fusing the file for distribution, move WinReg.dll to the top level, next to the executable and the rest of the love dll's. If you're not using love2d, then change the line in main.lua under reg:load to not use isFused, and use the second option in that tern.
+
 ## Usage
 ### reg:load()
 This is used to load various things. This line also contains the only love2D call. If you want to use this project without Love, change the love line to be everything up to the working .lua. For example, if your dir looks like this

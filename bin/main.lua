@@ -16,7 +16,9 @@ end
 		--===LOVE FUNCTIONS===--
 
 function reg:load()
-	self.data.reg = ffi.load(love.filesystem.getSource() .. "/" .. sub_path .. "WinReg.dll")
+	local source = love.filesystem.getSource()
+
+	self.data.reg = ffi.load(love.filesystem.isFused() and (source:match("(.+)\\.+$") .. "/WinReg.dll") or (source .. "/" .. sub_path .. "WinReg.dll"))
 	
 	ffi.cdef(" char * reg(const char * args); ")
 end
