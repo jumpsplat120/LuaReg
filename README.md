@@ -7,6 +7,8 @@ Drop the bin folder into your project. Feel free to name it whatever you'd like.
 ## Dependencies
 Written for LuaJIT. Needs ffi to load the dll, since I wrote the dll in C# and exported it using DllExport. Feel free to take a look at the .cs file and rewrite it to use the lua api. Uses one line from Love2D that helps locate the currently running project; `love.filesystem.getSource()`. If you can replace that, you don't need Love.
 
+Needs getClassic, my fork of classic.lua that has getters and setters. Comes prepackaged.
+
 ## Notes
 Some terminology might not be what you expect. That's due to the term key originally being used to refer both to the registry key, as well as the key for a key/value pair within a registry key. So from here on, keys refer exclusively to the key/value pairs, while **entries** are the "folder" that holds the key/value pairs.
 
