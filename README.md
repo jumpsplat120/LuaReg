@@ -2,7 +2,7 @@
  Basic Windows registry manipulation using lua.
 
 ## Installation
-Drop the bin folder into your project. Feel free to name it whatever you'd like. `require` main. If you have fused the project, make sure to move `WinReg.dll` to the top level, next to the executable.
+Drop the bin folder into your project. Feel free to name it whatever you'd like. `require` main. If you have fused the project, make sure to move `WinReg.dll` to the top level, next to the executable. Call reg:load() before doing anything else.
 
 ## Dependencies
 Written for LuaJIT. Needs ffi to load the dll, since I wrote the dll in C# and exported it using DllExport. Feel free to take a look at the .cs file and rewrite it to use the lua api. Uses one line from Love2D that helps locate the currently running project; `love.filesystem.getSource()`. If you can replace that, you don't need Love.
