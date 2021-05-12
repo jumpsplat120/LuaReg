@@ -4,3 +4,9 @@ E:\Documents\C++\WinReg\obj\Debug\WinReg.csprojAssemblyReference.cache
 E:\Documents\C++\WinReg\obj\Debug\WinReg.csproj.CoreCompileInputs.cache
 E:\Documents\C++\WinReg\obj\Debug\WinReg.dll
 E:\Documents\C++\WinReg\obj\Debug\WinReg.pdb
+D:\Documents\Code\Lua\LuaReg\src\bin\Debug\WinReg.dll
+D:\Documents\Code\Lua\LuaReg\src\bin\Debug\WinReg.pdb
+D:\Documents\Code\Lua\LuaReg\src\obj\Debug\WinReg.csprojAssemblyReference.cache
+D:\Documents\Code\Lua\LuaReg\src\obj\Debug\WinReg.csproj.CoreCompileInputs.cache
+D:\Documents\Code\Lua\LuaReg\src\obj\Debug\WinReg.dll
+D:\Documents\Code\Lua\LuaReg\src\obj\Debug\WinReg.pdb

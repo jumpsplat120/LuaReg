@@ -1,21 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Documents\\C++\\WinReg\\WinReg.csproj": {}
+    "D:\\Documents\\Code\\Lua\\LuaReg\\src\\WinReg.csproj": {}
   },
   "projects": {
-    "E:\\Documents\\C++\\WinReg\\WinReg.csproj": {
+    "D:\\Documents\\Code\\Lua\\LuaReg\\src\\WinReg.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Documents\\C++\\WinReg\\WinReg.csproj",
+        "projectUniqueName": "D:\\Documents\\Code\\Lua\\LuaReg\\src\\WinReg.csproj",
         "projectName": "WinReg",
-        "projectPath": "E:\\Documents\\C++\\WinReg\\WinReg.csproj",
-        "packagesPath": "C:\\Users\\Jumpsplat120\\.nuget\\packages\\",
-        "outputPath": "E:\\Documents\\C++\\WinReg\\obj\\",
+        "projectPath": "D:\\Documents\\Code\\Lua\\LuaReg\\src\\WinReg.csproj",
+        "packagesPath": "C:\\Users\\jumps\\.nuget\\packages\\",
+        "outputPath": "D:\\Documents\\Code\\Lua\\LuaReg\\src\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [
-          "C:\\Users\\Jumpsplat120\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jumps\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

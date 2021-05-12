@@ -61,56 +61,56 @@ namespace WinReg
                 if (args.Length == 5) {
                     try {
                         sub_key = base_key.OpenSubKey(sub_key_str, true);
+                        if (action == "set_key") {
+                            try {
+                                sub_key.CreateSubKey(data1);
+                                return_value = "OUT=true";
+                            } catch (Exception e) { return_value = "ERR=" + e.ToString(); }
+                        } else if (action == "set_val") {
+                            try {
+                                sub_key.SetValue(data1, data2);
+                                return_value = "OUT=true";
+                            } catch (Exception e) { return_value = "ERR=" + e.ToString(); }
+                        } else if (action == "delete_key") {
+                            try {
+                                sub_key.DeleteSubKey(data1);
+                                return_value = "OUT=true";
+                            } catch (Exception e) {
+                                if (typeof(ArgumentException) == e.GetType()) {
+                                    return_value = "OUT=false";
+                                } else {
+                                    return_value = "ERR=" + e.ToString();
+                                }
+                            }
+                        } else if (action == "delete_val") {
+                            try {
+                                sub_key.DeleteValue(data1);
+                                return_value = "OUT=true";
+                            } catch (Exception e) {
+                                if (typeof(ArgumentException) == e.GetType()) {
+                                    return_value = "OUT=false";
+                                } else {
+                                    return_value = "ERR=" + e.ToString();
+                                }
+                            }
+                        } else if (action == "get_val") {
+                            object result = sub_key.GetValue(data1);
+                            if (result != null) { return_value = "OUT=" + result.ToString(); } else { return_value = "OUT=nil"; }
+                        } else if (action == "get_all_vals" ) {
+                            string[] all_vals = sub_key.GetValueNames();
+                            return_value = "OUT=";
+                            foreach (string value in all_vals) { return_value += value + "|"; }
+                        } else if (action == "get_subkeys") {
+                            try {
+                                string[] sub_key_names = sub_key.GetSubKeyNames();
+                                return_value = "OUT=";
+                                foreach (string name in sub_key_names) {
+                                    return_value += name + "|";
+                                }
+                            } catch (Exception e) { return_value = "ERR=" + e.ToString(); }
+                        }
                     }
                     catch (Exception e) { return_value = "ERR=" + e.ToString(); }
-                    if (action == "set_key") {
-                        try {
-                            sub_key.CreateSubKey(data1);
-                            return_value = "OUT=true";
-                        } catch (Exception e) { return_value = "ERR=" + e.ToString(); }
-                    } else if (action == "set_val") {
-                        try {
-                            sub_key.SetValue(data1, data2);
-                            return_value = "OUT=true";
-                        } catch (Exception e) { return_value = "ERR=" + e.ToString(); }
-                    } else if (action == "delete_key") {
-                        try {
-                            sub_key.DeleteSubKey(data1);
-                            return_value = "OUT=true";
-                        } catch (Exception e) {
-                            if (typeof(ArgumentException) == e.GetType()) {
-                                return_value = "OUT=false";
-                            } else {
-                                return_value = "ERR=" + e.ToString();
-                            }
-                        }
-                    } else if (action == "delete_val") {
-                        try {
-                            sub_key.DeleteValue(data1);
-                            return_value = "OUT=true";
-                        } catch (Exception e) {
-                            if (typeof(ArgumentException) == e.GetType()) {
-                                return_value = "OUT=false";
-                            } else {
-                                return_value = "ERR=" + e.ToString();
-                            }
-                        }
-                    } else if (action == "get_val") {
-                        object result = sub_key.GetValue(data1);
-                        if (result != null) { return_value = "OUT=" + result.ToString(); } else { return_value = "OUT=nil"; }
-                    } else if (action == "get_all_vals" ) {
-                        string[] all_vals = sub_key.GetValueNames();
-                        return_value = "OUT=";
-                        foreach (string value in all_vals) { return_value += value + "|"; }
-                    } else if (action == "get_subkeys") {
-                        try {
-                            string[] sub_key_names = sub_key.GetSubKeyNames();
-                            return_value = "OUT=";
-                            foreach (string name in sub_key_names) {
-                                return_value += name + "|";
-                            }
-                        } catch (Exception e) { return_value = "ERR=" + e.ToString(); }
-                    }
                 } else {
                     return_value = "ERR=Missing required arguments; expected 5 arguments, recieved " + args.Length.ToString() + " args.";
                 }

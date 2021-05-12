@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "peyqlvgOmXPCaQwYy0KAWi/ibOxwRc9fd+hFyZp2C4dijMe5ued2dO53B+O/X63WgSzFDECEVmMdoDXFQ2hzkw==",
+  "dgSpecHash": "EIZkYOLOjG9nNWYZxuOirl1CdTw31+/gfWQai+CTywX+vfLJYvAaYH2XpFSHBXZnlm2CUGSTa+b2YearCQxM5A==",
   "success": true,
-  "projectFilePath": "E:\\Documents\\C++\\WinReg\\WinReg.csproj",
+  "projectFilePath": "D:\\Documents\\Code\\Lua\\LuaReg\\src\\WinReg.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Jumpsplat120\\.nuget\\packages\\dllexport\\1.7.4\\dllexport.1.7.4.nupkg.sha512"
+    "C:\\Users\\jumps\\.nuget\\packages\\dllexport\\1.7.4\\dllexport.1.7.4.nupkg.sha512"
   ],
   "logs": []
 }
